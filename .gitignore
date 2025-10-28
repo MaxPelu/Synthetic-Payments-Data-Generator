@@ -57,6 +57,11 @@ models/*.ckpt
 logs/
 *.log
 
+# Visualizations
+visualizations/*.png
+visualizations/*.jpg
+visualizations/*.jpeg
+
 # OS
 .DS_Store
 Thumbs.db

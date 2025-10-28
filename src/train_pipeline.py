@@ -12,14 +12,17 @@ import argparse
 import pandas as pd
 from pathlib import Path
 
-# Add src to path
-# Agregar src al path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# Add src to path if needed
+# Agregar src al path si es necesario
+if __name__ == '__main__':
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    sys.path.insert(0, parent_dir)
 
-from data_generator import PaymentDataGenerator
-from eda_analysis import PaymentEDA
-from models.gan_model import PaymentGAN
-from models.vae_model import PaymentVAE
+from src.data_generator import PaymentDataGenerator
+from src.eda_analysis import PaymentEDA
+from src.models.gan_model import PaymentGAN
+from src.models.vae_model import PaymentVAE
 
 
 def ensure_directories():

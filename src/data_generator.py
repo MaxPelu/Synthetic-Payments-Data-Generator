@@ -124,7 +124,7 @@ class PaymentDataGenerator:
             # Generar detalles de factura
             invoice_id = f'INV-{transaction_date.year}-{i:06d}'
             payment_method = random.choice(['Wire Transfer', 'ACH', 'Check', 'Credit Card'])
-            currency = random.choice(['USD', 'EUR', 'GBP'], p=[0.7, 0.2, 0.1])
+            currency = np.random.choice(['USD', 'EUR', 'GBP'], p=[0.7, 0.2, 0.1])
             
             # Payment status with realistic delays
             # Estado de pago con retrasos realistas

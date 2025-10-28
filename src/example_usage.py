@@ -11,12 +11,15 @@ import sys
 import pandas as pd
 import torch
 
-# Add src to path
-# Agregar src al path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# Add src to path if needed
+# Agregar src al path si es necesario
+if __name__ == '__main__':
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    sys.path.insert(0, parent_dir)
 
-from models.gan_model import PaymentGAN
-from models.vae_model import PaymentVAE
+from src.models.gan_model import PaymentGAN
+from src.models.vae_model import PaymentVAE
 
 
 def example_load_and_generate_gan():
