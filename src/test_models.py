@@ -7,10 +7,15 @@ import sys
 import os
 import pandas as pd
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# Add parent directory to path for proper imports
+# Agregar directorio padre al path para importaciones correctas
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
 
-from models.gan_model import PaymentGAN
-from models.vae_model import PaymentVAE
+from src.models.gan_model import PaymentGAN
+from src.models.vae_model import PaymentVAE
 
 def test_gan():
     """Test GAN model instantiation and quick training."""

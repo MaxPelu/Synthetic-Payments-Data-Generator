@@ -11,11 +11,11 @@ import sys
 import pandas as pd
 import torch
 
-# Add src to path if needed
-# Agregar src al path si es necesario
-if __name__ == '__main__':
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.dirname(current_dir)
+# Add parent directory to path for proper imports
+# Agregar directorio padre al path para importaciones correctas
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 
 from src.models.gan_model import PaymentGAN
