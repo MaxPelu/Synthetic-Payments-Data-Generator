@@ -93,9 +93,22 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. **Install dependencies:**
+
+**Option A: Using pip (recommended for development)**
 ```bash
 pip install -r requirements.txt
 ```
+
+**Option B: Using setup.py (recommended for production)**
+```bash
+pip install -e .
+```
+
+This will install the package and create command-line tools:
+- `synpay-generate` - Generate initial data
+- `synpay-eda` - Run exploratory data analysis
+- `synpay-train` - Run complete training pipeline
+- `synpay-example` - Run usage examples
 
 ### Español
 
@@ -112,9 +125,22 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
 
 3. **Instalar dependencias:**
+
+**Opción A: Usando pip (recomendado para desarrollo)**
 ```bash
 pip install -r requirements.txt
 ```
+
+**Opción B: Usando setup.py (recomendado para producción)**
+```bash
+pip install -e .
+```
+
+Esto instalará el paquete y creará herramientas de línea de comandos:
+- `synpay-generate` - Generar datos iniciales
+- `synpay-eda` - Ejecutar análisis exploratorio
+- `synpay-train` - Ejecutar pipeline completo de entrenamiento
+- `synpay-example` - Ejecutar ejemplos de uso
 
 ---
 
